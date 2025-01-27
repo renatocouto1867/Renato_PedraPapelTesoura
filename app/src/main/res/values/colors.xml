@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="preto">#FF000000</color>
+    <color name="branco">#FFFFFFFF</color>
+
+    <color name="azul_claro">#81D4FA</color>
+    <color name="azul_escuro">#4FC3F7</color>
+
+    <color name="verde_claro">#A5D6A7</color>
+    <color name="amarelo_vibrante">#FFF176</color>
+    <color name="laranja_claro">#FFAB91</color>
+    <color name="rosa_claro">#F48FB1</color>
+    <color name="vermelho_pastel">#FF6F61</color>
+
+
+    <color name="texto_branco">#FFFFFF</color>
+    <color name="texto_preto">#000000</color>
 </resources>

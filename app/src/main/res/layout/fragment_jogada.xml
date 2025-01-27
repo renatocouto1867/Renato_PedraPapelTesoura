@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.jogada.JogadaFragment">
+
+    <TextView
+        android:id="@+id/text_view_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/selecione_uma_opcao"
+        android:textSize="25sp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/button_pedra"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/pedra"
+        android:contentDescription="@string/pedra"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_titulo" />
+
+    <ImageButton
+        android:id="@+id/button_papel"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/papel"
+        android:background="@android:color/transparent"
+        android:src="@drawable/papel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_pedra" />
+
+
+    <ImageButton
+        android:id="@+id/button_tesoura"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/tesoura"
+        android:contentDescription="@string/tesoura"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_papel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Renato_PedraPapelTesoura</string>
+    <string name="como_jogar">Como Jogar</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="voltar">Voltar</string>
+    <string name="andoid">Andoid: </string>
+    <string name="usuario">Jogador: </string>
+    <string name="selecione_uma_opcao">Selecione uma opção</string>
+    <string name="papel">Papel</string>
+    <string name="pedra">Pedra</string>
+    <string name="tesoura">Tesoura</string>
+    <string name="novo_jogo">Novo Jogo</string>
+    <string name="placar">Placar</string>
+    <string name="escolha_android">O Android escolheu:</string>
+    <string name="voce_perdeu">Você perdeu!</string>
+    <string name="voce_ganhou">Você ganhou!</string>
+    <string name="erro_no_sistema">Erro no sistema!</string>
+    <string name="opcao_invalida">"Opção inválida: "</string>
+    <string name="voce_empatou">Você empatou!</string>
+    <string name="placar_atual">Placar Atual</string>
+    <string name="ninguem_ganhou">Ninguém ganhou!</string>
+    <string name="sair">Sair</string>
+    <string name="diginte_seu_nome">Diginte seu nome!</string>
 </resources>
