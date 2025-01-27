@@ -20,9 +20,9 @@
 
     <ImageButton
         android:id="@+id/button_pedra"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/pedra"
         android:contentDescription="@string/pedra"
         android:background="@android:color/transparent"
@@ -32,9 +32,8 @@
 
     <ImageButton
         android:id="@+id/button_papel"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:contentDescription="@string/papel"
         android:background="@android:color/transparent"
         android:src="@drawable/papel"
@@ -42,12 +41,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_pedra" />
 
-
     <ImageButton
         android:id="@+id/button_tesoura"
         android:layout_width="210dp"
         android:layout_height="210dp"
-        android:layout_marginTop="20dp"
         android:src="@drawable/tesoura"
         android:contentDescription="@string/tesoura"
         android:background="@android:color/transparent"

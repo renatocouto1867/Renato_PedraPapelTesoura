@@ -10,7 +10,7 @@ public class InicialViewModel extends ViewModel {
     private final MutableLiveData<Jogo> jogo;
 
     public void setJogador(String nome){
-        Auxiliar.jogo.setNomeJogador(nome);
+        Auxiliar.jogo.setNomeJogador(Auxiliar.limpaString(nome));
     }
 
     public InicialViewModel(){

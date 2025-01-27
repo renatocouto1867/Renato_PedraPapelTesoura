@@ -64,7 +64,7 @@
                 android:elevation="8dp"
                 android:text="Como Jogar"
                 android:textColor="@color/texto_preto"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:cornerRadius="6dp"
 
                 />
@@ -79,7 +79,7 @@
                 android:elevation="8dp"
                 android:text="Jogar"
                 android:textColor="@color/texto_preto"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:cornerRadius="6dp" />
 
 
