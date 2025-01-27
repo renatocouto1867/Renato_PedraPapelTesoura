@@ -18,12 +18,10 @@ public class Auxiliar {
     }
 
 
-//    public static void zerarJogo() {
-//        jogo.zerarJogo();
-//        salvarJogo(jogo.getContext());
-//        Intent intent = new Intent(context, MainActivity.class);
-//        context.startActivity(intent);
-//    }
+    public static void zerarJogo(Context context) {
+        jogo.zerarJogo();
+        salvarJogo(context);
+    }
 
 
     public static void recuparaJogo(Context context) {

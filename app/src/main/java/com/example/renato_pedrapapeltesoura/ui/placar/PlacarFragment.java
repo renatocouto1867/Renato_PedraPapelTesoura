@@ -47,7 +47,6 @@ public class PlacarFragment extends Fragment {
 
         configuraClick();
 
-
         return root;
     }
 
@@ -59,6 +58,15 @@ public class PlacarFragment extends Fragment {
         binding.buttonSair.setOnClickListener(view -> {
             requireActivity().finish();
         });
+
+        binding.buttonZera.setOnClickListener(view -> {
+            zeraJogo();
+        });
+    }
+
+    private void zeraJogo() {
+        viewModel.zerar(requireActivity());
+        viewModel.getJogo();
     }
 
     private void exibePlacar(Jogo jogo) {
@@ -73,6 +81,5 @@ public class PlacarFragment extends Fragment {
                 .addToBackStack(null)
                 .commit();
     }
-
 
 }

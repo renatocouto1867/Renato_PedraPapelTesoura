@@ -23,4 +23,7 @@
     <string name="ninguem_ganhou">Ninguém ganhou!</string>
     <string name="sair">Sair</string>
     <string name="diginte_seu_nome">Diginte seu nome!</string>
+    <string name="aguarde">Aguarde...</string>
+    <string name="jogar">Jogar</string>
+    <string name="zera">Zera</string>
 </resources>

@@ -1,6 +1,8 @@
 package com.example.renato_pedrapapeltesoura.ui.resultado;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +17,13 @@ import com.example.renato_pedrapapeltesoura.ui.placar.PlacarFragment;
 public class ResultadoFragment extends Fragment {
     private static final String ARG_VENCEDOR = "vencedor";
     private static final String ARG_ESCOLHA_ANDROID = "escolhaAndroid";
+    private final Handler handler;
     private FragmentResultadoBinding binding;
     private int vencedor;
     private int escolhaAndroid;
 
     public ResultadoFragment() {
-
+        handler = new Handler(Looper.getMainLooper());
     }
 
     public static ResultadoFragment newInstance(int vencedor, int escolhaAndroid) {
@@ -29,6 +32,7 @@ public class ResultadoFragment extends Fragment {
         args.putInt(ARG_VENCEDOR, vencedor);
         args.putInt(ARG_ESCOLHA_ANDROID, escolhaAndroid);
         fragment.setArguments(args);
+
         return fragment;
     }
 
@@ -49,11 +53,23 @@ public class ResultadoFragment extends Fragment {
 
         binding = FragmentResultadoBinding.inflate(inflater, container, false);
 
+        exibeProgresseBar();
         exibeResultado();
         configuraClick();
 
         return binding.getRoot();
     }
+
+    private void exibeProgresseBar() {
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                binding.progressContainer.setVisibility(View.GONE);
+                binding.layoutTela.setVisibility(View.VISIBLE);
+            }
+        }, 1000);
+    }
+
 
     private void configuraClick() {
         binding.buttonNovoJogo.setOnClickListener(view -> {
