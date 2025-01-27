@@ -10,14 +10,24 @@ import java.util.List;
 
 public class Jogo implements Serializable {
     private String nomeJogador;
+    private String codigoJogador;
 
 
     private List<Jogada> jogadas;
 
 
-    public Jogo(String nomeJogador) {
+    public Jogo(String nomeJogador, String codigoJogador) {
         this.nomeJogador = nomeJogador;
+        this.codigoJogador = codigoJogador ;
         this.jogadas = new ArrayList<>();
+    }
+
+    public String getCodigoJogador() {
+        return codigoJogador;
+    }
+
+    public void setCodigoJogador(String codigoJogador) {
+        this.codigoJogador = codigoJogador;
     }
 
     public Jogo() {

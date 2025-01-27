@@ -9,10 +9,6 @@ import com.example.renato_pedrapapeltesoura.model.auxiliar.Auxiliar;
 public class MainActivityViewModel extends ViewModel {
 
 
-    public void carregaHistorico(Activity context) {
-        Auxiliar.recuparaJogo(context);
-    }
-
     public void salvaHistorico(Activity context) {
         Auxiliar.salvarJogo(context);
     }

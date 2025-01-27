@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.Random;
 
 /**
- * Classe que representa uma jogada no jogo de Pedra, Papel e Tesoura.
- */
+ * Classe que representa uma jogada no jogo
+ * */
 public class Jogada implements Serializable {
     private final int opcaoJogador;  // Escolha do jogador (0: Pedra, 1: Papel, 2: Tesoura)
     private final int opcaoAndroid; // Escolha do Android (gerada aleatoriamente)

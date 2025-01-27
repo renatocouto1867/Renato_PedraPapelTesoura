@@ -46,9 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
         viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
 
-        viewModel.carregaHistorico(this);
-
-
         return view;
     }
 

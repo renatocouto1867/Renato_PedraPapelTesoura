@@ -1,27 +1,18 @@
 package com.example.renato_pedrapapeltesoura.ui.inicial;
 
-import androidx.lifecycle.MutableLiveData;
+import android.app.Activity;
+
 import androidx.lifecycle.ViewModel;
 
-import com.example.renato_pedrapapeltesoura.model.Jogo;
 import com.example.renato_pedrapapeltesoura.model.auxiliar.Auxiliar;
 
 public class InicialViewModel extends ViewModel {
-    private final MutableLiveData<Jogo> jogo;
 
-    public void setJogador(String nome){
-        Auxiliar.jogo.setNomeJogador(Auxiliar.limpaString(nome));
+
+    public void iniciaJogo(Activity context, String nome) {
+
+        Auxiliar.iniciarJogo(context, nome);
     }
 
-    public InicialViewModel(){
-        jogo = new MutableLiveData<>();
-    }
 
-    private void carregaJogo() {
-        jogo.postValue(Auxiliar.jogo);
-    }
-
-    public MutableLiveData<Jogo> getJogo(){
-        return jogo;
-    }
 }

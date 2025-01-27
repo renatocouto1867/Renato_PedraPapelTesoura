@@ -66,8 +66,7 @@ public class InicialFragment extends Fragment {
 
     private void novoJogo() {
         if (validaCampos()) {
-
-            viewModel.setJogador(binding.editNomeJogador.getText().toString());
+            viewModel.iniciaJogo(requireActivity(), binding.editNomeJogador.getText().toString());
             iniciarFragment(JogadaFragment.newInstance());
 
         } else {

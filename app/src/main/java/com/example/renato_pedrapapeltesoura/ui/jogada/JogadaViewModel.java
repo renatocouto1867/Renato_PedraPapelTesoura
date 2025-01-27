@@ -22,7 +22,7 @@ public class JogadaViewModel extends ViewModel {
 
     public void criaJogada(int opcao, Context context) {
 
-        Jogada jogada = Auxiliar.jogo.novaRodada(opcao);
+        Jogada jogada = Auxiliar.novaJogada(opcao);
         Auxiliar.salvarJogo(context);
         retornaJogada.postValue(jogada);
     }

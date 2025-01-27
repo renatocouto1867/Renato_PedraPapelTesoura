@@ -19,7 +19,7 @@ public class PlacarViewModel extends ViewModel {
     }
 
     public void getJogo() {
-        jogo.postValue(Auxiliar.jogo);
+        jogo.postValue(Auxiliar.getJogo());
     }
 
     public LiveData<Jogo> retornaJogo() {
