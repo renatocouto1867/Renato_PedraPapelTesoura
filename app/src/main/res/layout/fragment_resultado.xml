@@ -87,43 +87,68 @@
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="6dp"
+            android:layout_marginHorizontal="2dp"
             android:layout_marginBottom="32dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/buttonSair"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/vermelho_pastel"
-                android:text="@string/sair"
-                android:textColor="@color/texto_branco" />
+                android:orientation="horizontal"
+                >
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonSair"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/vermelho_pastel"
+                    android:text="@string/sair"
+                    android:textColor="@color/texto_branco" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/buttonNovoJogo"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="4dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/verde_claro"
-                android:text="@string/jogar"
-                android:textColor="@color/texto_branco" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonNovoJogo"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/verde_claro"
+                    android:text="@string/jogar"
+                    android:textColor="@color/texto_branco" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/buttonPlacar"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/azul_claro"
-                android:text="@string/placar"
-                android:textColor="@color/texto_preto" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonPlacar"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/azul_claro"
+                    android:text="@string/placar"
+                    android:textColor="@color/texto_preto" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_email"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/laranja_claro"
+                    android:text="Enviar E-mail"
+                    android:textColor="@color/texto_preto" />
+
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

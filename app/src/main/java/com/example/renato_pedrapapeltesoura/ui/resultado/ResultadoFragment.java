@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.renato_pedrapapeltesoura.R;
 import com.example.renato_pedrapapeltesoura.databinding.FragmentResultadoBinding;
+import com.example.renato_pedrapapeltesoura.ui.email.EnviaEmailFragment;
 import com.example.renato_pedrapapeltesoura.ui.jogada.JogadaFragment;
 import com.example.renato_pedrapapeltesoura.ui.placar.PlacarFragment;
 
@@ -21,6 +22,7 @@ public class ResultadoFragment extends Fragment {
     private FragmentResultadoBinding binding;
     private int vencedor;
     private int escolhaAndroid;
+    private String resultaEmail;
 
     public ResultadoFragment() {
         handler = new Handler(Looper.getMainLooper());
@@ -83,20 +85,29 @@ public class ResultadoFragment extends Fragment {
         binding.buttonSair.setOnClickListener(view -> {
             sair();
         });
+
+        binding.buttonEmail.setOnClickListener(view -> {
+            iniciarFragment(EnviaEmailFragment.newInstance(resultaEmail));
+        });
     }
 
 
     private void exibeResultado() {
         if (vencedor == 0) {
             binding.textViewResultado.setText(R.string.voce_empatou);
+            resultaEmail="houve um empate na rodada, você ganhou 1 ponto!";
             defineImagem(escolhaAndroid);
         } else if (vencedor == 1) {
             binding.textViewResultado.setText(R.string.voce_ganhou);
+            resultaEmail="Você venceu a rodada e ganhou 2 ponto!";
         } else if (vencedor == 2) {
             binding.textViewResultado.setText(R.string.voce_perdeu);
-        } else if (vencedor == 3) {
-            binding.textViewResultado.setText(R.string.ninguem_ganhou);
-        } else {
+            resultaEmail="Você perdeu a rodada! O Andorid Ganhou 2 pontos";
+        }
+//        else if (vencedor == 3) {
+//            binding.textViewResultado.setText(R.string.ninguem_ganhou);
+//        }
+        else {
             binding.textViewResultado.setText(R.string.erro_no_sistema);
         }
         defineImagem(escolhaAndroid);
