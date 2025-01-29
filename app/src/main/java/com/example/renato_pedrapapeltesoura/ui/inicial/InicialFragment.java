@@ -42,6 +42,7 @@ public class InicialFragment extends Fragment {
         viewModel = new ViewModelProvider(this).get(InicialViewModel.class);
 
         configuraClick();
+        binding.editNomeJogador.requestFocus();
 
         return root;
     }

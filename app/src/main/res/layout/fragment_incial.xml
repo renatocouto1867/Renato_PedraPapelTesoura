@@ -4,89 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".ui.inicial.InicialFragment">
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView_logo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="Logo do jogo"
+        android:src="@drawable/pedra_papel_tesoura"
+        app:layout_constraintBottom_toTopOf="@+id/layout_nome_jogador"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
-        <ImageView
-            android:id="@+id/imageView_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/pedra_papel_tesoura"
-            android:layout_gravity="center"
-            android:layout_marginBottom="40dp"
-            />
+        app:layout_constraintVertical_chainStyle="packed" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layout_nome_jogador"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_nome_jogador"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Nome do Jogador"
+        app:layout_constraintBottom_toTopOf="@+id/layout_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_logo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_nome_jogador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:hint="Nome do Jogador">
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLength="20"
+            android:textSize="18sp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_nome_jogador"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:id="@+id/layout_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_nome_jogador">
 
-        <!--Bunttos-->
-        <LinearLayout
-            android:id="@+id/layout_button"
-            android:layout_width="match_parent"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_regras"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="60dp"
-            android:orientation="horizontal">
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/laranja_claro"
+            android:elevation="8dp"
+            android:paddingVertical="12dp"
+            android:text="Como Jogar"
+            android:textColor="@color/texto_preto"
+            android:textSize="16sp"
+            app:cornerRadius="6dp" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_regras"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="3dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/laranja_claro"
-                android:elevation="8dp"
-                android:text="Como Jogar"
-                android:textColor="@color/texto_preto"
-                android:textSize="16sp"
-                app:cornerRadius="6dp"
-
-                />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_novo_jogar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/verde_claro"
-                android:elevation="8dp"
-                android:text="Jogar"
-                android:textColor="@color/texto_preto"
-                android:textSize="16sp"
-                app:cornerRadius="6dp" />
-
-
-
-
-        </LinearLayout>
-
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_novo_jogar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/verde_claro"
+            android:elevation="8dp"
+            android:paddingVertical="12dp"
+            android:text="Jogar"
+            android:textColor="@color/texto_preto"
+            android:textSize="16sp"
+            app:cornerRadius="6dp" />
 
     </LinearLayout>
 
